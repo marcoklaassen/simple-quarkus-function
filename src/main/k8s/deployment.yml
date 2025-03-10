@@ -9,12 +9,13 @@ spec:
       app: simple-quarkus-function
   template:
     metadata:
+      creationTimestamp: null
       labels:
         app: simple-quarkus-function
     spec:
       containers:
         - name: container
-          image: 'image-registry.openshift-image-registry.svc:5000/streaming-demo/simple-quarkus-function:latest'
+          image: 'image-registry.openshift-image-registry.svc:5000/streaming-demo/simple-quarkus-function@sha256:9c7ad2cfa4bb3a5539c39e075cb411311ff173485eda0bf87e498cdc29485d16'
           ports:
             - containerPort: 8080
               protocol: TCP

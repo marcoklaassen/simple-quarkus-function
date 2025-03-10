@@ -21,6 +21,7 @@ WORKDIR /work/
 RUN chown 1001 /work \
     && chmod "g+rwX" /work \
     && chown 1001:root /work
+RUN microdnf update && microdnf install libc6
 COPY --chown=1001:root --chmod=0755 target/*-runner /work/application
 
 EXPOSE 8080

@@ -60,7 +60,7 @@ spec:
               - package
               - '-Pnative'
             computeResources: {}
-            image: 'quay.io/quarkus/ubi-quarkus-native-image:22.3-java17'
+            image: 'quay.io/quarkus/ubi-quarkus-mandrel-builder-image:24.1.2.0-Final-java23-2025-03-09'
             name: build-executable
             workingDir: /workspace/source
         workspaces:
@@ -74,7 +74,7 @@ spec:
         - name: IMAGE
           value: 'image-registry.openshift-image-registry.svc:5000/streaming-demo/simple-quarkus-function'
         - name: DOCKERFILE
-          value: ./src/main/docker/Dockerfile.native
+          value: ./src/main/docker/Dockerfile.native-micro
         - name: BUILD_ARGS
           value: []
         - name: CONTEXT

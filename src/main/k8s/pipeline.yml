@@ -60,7 +60,7 @@ spec:
               - package
               - '-Pnative'
             computeResources: {}
-            image: 'quay.io/quarkus/ubi9-quarkus-graalvmce-builder-image:jdk-21'
+            image: 'quay.io/quarkus/ubi-quarkus-mandrel-builder-image:jdk-21'
             name: build-executable
             workingDir: /workspace/source
         workspaces:
